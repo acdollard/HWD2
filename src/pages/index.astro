@@ -1,49 +1,977 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Footer from '../components/Footer.astro';
-import Header from '../components/Header.astro';
-import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import BaseHead from "../components/BaseHead.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This template
-				serves as a lightweight, minimally-styled starting point for anyone looking to build a personal
-				website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to
-				<a href="https://docs.astro.build/">read the docs</a>
-				or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out
-				<a href="https://github.com/Charca/astro-blog-template">astro-blog-template</a>
-				by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<Footer />
-	</body>
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <Header />
+    <main>
+      <section id="hero-1351">
+        <div class="cs-container">
+          <div class="cs-content">
+            <span class="cs-topper">Welcome To Stitch Agency</span>
+            <h1 class="cs-title">Small Business Web Design & Development</h1>
+            <p class="cs-text">
+              No page builders or WordPress - We offer superior 100% hand-coded
+              websites with starting at $150/mo.
+            </p>
+            <a href="" class="cs-button-solid">Free Consultation</a>
+          </div>
+        </div>
+        <!--Bubble Groups-->
+        <div class="cs-bubbles cs-bubbles1" aria-hidden="true"></div>
+        <div class="cs-bubbles cs-bubbles2" aria-hidden="true"></div>
+        <!-- Background Image, background image added in the css at 1600px for parallax effect -->
+        <picture class="cs-background">
+          <source
+            media="(max-width: 600px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/abstract-m.jpg"
+          />
+          <source
+            media="(min-width: 601px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/abstract.jpg"
+          />
+          <img
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/abstract.jpg"
+            alt="abstract background"
+            width="2250"
+            height="1500"
+            aria-hidden="true"
+          />
+        </picture>
+      </section>
+      <!-- ============================================ -->
+      <!--                   Pricing                    -->
+      <!-- ============================================ -->
+
+      <section id="pricing-2383">
+        <div class="cs-container">
+          <div class="cs-content">
+            <span class="cs-topper">Pricing</span>
+            <h2 class="cs-title">Prioritize Your Health and Happiness</h2>
+          </div>
+          <ul class="cs-card-group">
+            <li class="cs-item">
+              <div class="cs-wrapper">
+                <div class="cs-flex">
+                  <h3 class="cs-package">Personal Therapy</h3>
+                  <span class="cs-price">$170-$190</span>
+                  <span class="cs-desc"> per session </span>
+                </div>
+                <p class="cs-item-text">
+                  Customized sessions focused on overcoming fears, enhancing
+                  well-being, and fostering personal development. Experience
+                  support tailored just for you.
+                </p>
+                <a href="" class="cs-button-solid cs-price-button"
+                  >Book a Session</a
+                >
+              </div>
+              <picture class="cs-picture">
+                <!--Mobile Image-->
+                <source
+                  media="(max-width: 600px)"
+                  srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/blob1.jpg"
+                />
+                <!--Tablet and above Image-->
+                <source
+                  media="(min-width: 601px)"
+                  srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/blob1.jpg"
+                />
+                <img
+                  loading="lazy"
+                  decoding="async"
+                  src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/blob1.jpg"
+                  alt="graphic"
+                  width="413"
+                  height="268"
+                  aria-hidden="true"
+                />
+              </picture>
+            </li>
+            <li class="cs-item cs-popular">
+              <div class="cs-wrapper">
+                <div class="cs-flex">
+                  <h3 class="cs-package">Relationship Therapy</h3>
+                  <span class="cs-price">$170-$190</span>
+                  <span class="cs-desc"> per session </span>
+                </div>
+                <p class="cs-item-text">
+                  Customized sessions focused on overcoming fears, enhancing
+                  well-being, and fostering personal development. Experience
+                  support tailored just for you.
+                </p>
+                <a href="" class="cs-button-solid cs-price-button"
+                  >Book a Session</a
+                >
+              </div>
+              <picture class="cs-picture">
+                <!--Mobile Image-->
+                <source
+                  media="(max-width: 600px)"
+                  srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/blob2.jpg"
+                />
+                <!--Tablet and above Image-->
+                <source
+                  media="(min-width: 601px)"
+                  srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/blob2.jpg"
+                />
+                <img
+                  loading="lazy"
+                  decoding="async"
+                  src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/blob2.jpg"
+                  alt="graphic"
+                  width="413"
+                  height="268"
+                  aria-hidden="true"
+                />
+              </picture>
+            </li>
+            <li class="cs-item">
+              <div class="cs-wrapper">
+                <div class="cs-flex">
+                  <h3 class="cs-package">Eating Disorder Assessment</h3>
+                  <span class="cs-price">$325</span>
+                  <span class="cs-desc"> per session </span>
+                </div>
+                <p class="cs-item-text">
+                  Customized sessions focused on overcoming fears, enhancing
+                  well-being, and fostering personal development. Experience
+                  support tailored just for you.
+                </p>
+                <a href="" class="cs-button-solid cs-price-button"
+                  >Book a Session</a
+                >
+              </div>
+              <picture class="cs-picture">
+                <!--Mobile Image-->
+                <source
+                  media="(max-width: 600px)"
+                  srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/blob3.jpg"
+                />
+                <!--Tablet and above Image-->
+                <source
+                  media="(min-width: 601px)"
+                  srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/blob3.jpg"
+                />
+                <img
+                  loading="lazy"
+                  decoding="async"
+                  src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/blob3.jpg"
+                  alt="graphic"
+                  width="413"
+                  height="268"
+                  aria-hidden="true"
+                />
+              </picture>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ============================================ -->
+      <!--              Side By Side Reverse            -->
+      <!-- ============================================ -->
+
+      <section id="sbsr-1279">
+        <div class="cs-container">
+          <picture class="cs-picture">
+            <!--Mobile Image-->
+            <source
+              media="(max-width: 600px)"
+              srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/sbs-construction.jpg"
+            />
+            <!--Tablet and above Image-->
+            <source
+              media="(min-width: 601px)"
+              srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/sbs-construction.jpg"
+            />
+            <img
+              loading="lazy"
+              decoding="async"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/sbs-construction.jpg"
+              alt="construction"
+              width="738"
+              height="598"
+            />
+          </picture>
+          <div class="cs-content">
+            <div class="cs-flex">
+              <span class="cs-topper">Our Company</span>
+              <h2 class="cs-title">Get to Know Stitch Building agency</h2>
+            </div>
+            <p class="cs-text">
+              We believe in transparency, communication, and collaboration. We
+              listen carefully to our clients' needs and work closely with them
+              throughout the construction process to ensure their satisfaction.
+            </p>
+            <a href="" class="cs-button-solid">Learn More</a>
+          </div>
+        </div>
+        <picture class="cs-background">
+          <!--Mobile Image-->
+          <source
+            media="(max-width: 600px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/white-waves-m.svg"
+          />
+          <!--Tablet and above Image-->
+          <source
+            media="(min-width: 601px)"
+            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/white-waves.svg"
+          />
+          <img
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/white-waves.svg"
+            alt="waves"
+            width="960"
+            height="839"
+          />
+        </picture>
+      </section>
+    </main>
+    <Footer />
+  </body>
 </html>
+
+<style>
+  .chango {
+    font-family: "Noto Sans Devanagari", sans-serif;
+    font-weight: 300;
+  }
+
+  /*-- -------------------------- -->
+<---           Hero             -->
+<--- -------------------------- -*/
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    @keyframes floatAnimation {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-2rem);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+    @keyframes floatAnimation2 {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-3rem);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+    #hero-1351 {
+      box-sizing: border-box;
+      /* 250px - 500px - leaving extra space for the navigation */
+      padding: clamp(15.625rem, 35.95vw, 25rem) 1rem 0;
+      /* 200px - 250px */
+      padding-bottom: clamp(12.5rem, 16.5vw, 15.625rem);
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+    }
+    #hero-1351:before {
+      /* Overlay */
+      content: "";
+      width: 100%;
+      height: 30%;
+      background: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        from(#000000),
+        to(rgba(0, 0, 0, 0))
+      );
+      background: -o-linear-gradient(top, #000000 0%, rgba(0, 0, 0, 0) 100%);
+      background: linear-gradient(to bottom, #000000 0%, rgba(0, 0, 0, 0) 100%);
+      /* prevents the cursor from interacting with it */
+      pointer-events: none;
+      opacity: 1;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+    }
+    #hero-1351 .cs-container {
+      width: 100%;
+      max-width: 80rem;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    #hero-1351 .cs-content {
+      /* set text align to left if content needs to be left aligned */
+      text-align: left;
+      width: 100%;
+      max-width: 39.375rem;
+      display: flex;
+      flex-direction: column;
+      /* centers content horizontally, set to flex-start to left align */
+      align-items: flex-start;
+    }
+    #hero-1351 .cs-topper {
+      font-size: 1.25rem;
+      font-weight: 700;
+      line-height: 1.2em;
+      text-align: inherit;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.5rem;
+      color: #e8e8e8;
+      display: block;
+    }
+    #hero-1351 .cs-title {
+      /* 39px - 61px */
+      font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
+      font-weight: 700;
+      line-height: 1.2em;
+      text-align: inherit;
+      max-width: 20ch;
+      margin: 0 0 1rem 0;
+      color: #fff;
+      position: relative;
+    }
+    #hero-1351 .cs-text {
+      font-size: 1.25rem;
+      line-height: 1.5em;
+      text-align: inherit;
+      width: 100%;
+      /* 464px - 622px */
+      max-width: clamp(29rem, 60vw, 38.785rem);
+      margin: 0 0 2.5rem 0;
+      color: #e8e8e8;
+    }
+    #hero-1351 .cs-button-solid {
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 3.5rem;
+      text-decoration: none;
+      margin: 0;
+      padding: 0 3rem;
+      background-color: var(--primary);
+      overflow: hidden;
+      color: #fff;
+      border-radius: 1.875rem;
+      display: inline-block;
+      position: relative;
+      z-index: 1;
+      transition: color 0.3s;
+    }
+    #hero-1351 .cs-button-solid:before {
+      content: "";
+      width: 0%;
+      height: 100%;
+      background: #fff;
+      opacity: 1;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      transition: width 0.3s;
+    }
+    #hero-1351 .cs-button-solid:hover {
+      color: var(--primary);
+    }
+    #hero-1351 .cs-button-solid:hover:before {
+      width: 100%;
+    }
+    #hero-1351 .cs-bubbles {
+      /* this scales the children inside of it down. They're all in ems so they pull from the parent font size for their value of em, in this case, the value of em is tied to the viewwidth size and stops growing when the font size is equal to 1em, which it pulls from the nearst parent with a declred font size (which is the html tag, and that tag is 16px by default) */
+      font-size: min(2vw, 0.5em);
+      position: absolute;
+      z-index: -1;
+    }
+    #hero-1351 .cs-bubbles1 {
+      width: 42.5em;
+      height: 45.25em;
+      /* changes to 172 at large desktop */
+      top: 0;
+      right: -11.875rem;
+    }
+    #hero-1351 .cs-bubbles1:before {
+      /* white border bubble */
+      content: "";
+      width: 38.875em;
+      height: 38.875em;
+      background: transparent;
+      opacity: 1;
+      border: 1px solid #fff;
+      border-radius: 50%;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      animation-name: floatAnimation;
+      animation-duration: 7s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+      animation-fill-mode: forwards;
+    }
+    #hero-1351 .cs-bubbles1:after {
+      /* orange bubble */
+      content: "";
+      width: 34.125em;
+      height: 34.125em;
+      background: var(--primary);
+      opacity: 0.8;
+      border-radius: 50%;
+      display: block;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      animation-name: floatAnimation2;
+      animation-duration: 10s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+      animation-fill-mode: forwards;
+    }
+    #hero-1351 .cs-bubbles2 {
+      width: 20.625rem;
+      height: 29.75rem;
+      /* removed at larger desktop */
+      bottom: -16.25rem;
+      /* changes to 160px at larger desktop */
+      left: -13.75rem;
+    }
+    #hero-1351 .cs-bubbles2:before {
+      /* white border bubble */
+      content: "";
+      width: 20.625rem;
+      height: 20.625rem;
+      background: transparent;
+      opacity: 1;
+      border: 1px solid #fff;
+      border-radius: 50%;
+      display: block;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      animation-name: floatAnimation;
+      animation-duration: 5s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+      animation-fill-mode: forwards;
+    }
+    #hero-1351 .cs-bubbles2:after {
+      /* orange bubble */
+      content: "";
+      width: 16.25rem;
+      height: 16.25rem;
+      background: var(--primary);
+      opacity: 0.8;
+      border-radius: 50%;
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 2.5rem;
+      z-index: -1;
+      animation-name: floatAnimation2;
+      animation-duration: 14s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+      animation-fill-mode: forwards;
+    }
+    #hero-1351 .cs-background {
+      width: 100%;
+      height: 100%;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -2;
+    }
+    #hero-1351 .cs-background img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      /* makes the top of the image start at the top of the parent */
+      object-position: top;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #hero-1351 .cs-content {
+      width: 50%;
+    }
+    #hero-1351 .cs-bubbles {
+      font-size: 1em;
+    }
+    #hero-1351 .cs-bubbles1 {
+      /* changes to auto at large desktop */
+      right: -26.75rem;
+    }
+  }
+  /* Large Desktop - 1300px */
+  @media only screen and (min-width: 81.25rem) {
+    #hero-1351 .cs-bubbles1 {
+      /* 200px - 450px */
+      margin-left: clamp(12.5rem, 20vw, 28.125rem);
+      top: 10.75rem;
+      right: auto;
+      left: 50%;
+    }
+  }
+  /* Large Desktop Parallax Effect - 1600px */
+  @media only screen and (min-width: 100rem) {
+    #hero-1351 .cs-background {
+      background: url("https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/abstract.jpg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+    #hero-1351 .cs-background img {
+      display: none;
+    }
+  }
+  /* Larger Desktop - 1800px */
+  @media only screen and (min-width: 112.5rem) {
+    #hero-1351 .cs-bubbles2 {
+      margin-right: 50rem;
+      top: 13.125rem;
+      right: 50%;
+      bottom: auto;
+      left: auto;
+    }
+  }
+  /*-- -------------------------- -->
+<---          Pricing           -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #pricing-2383 {
+      padding: var(--sectionPadding);
+      background-color: #fbf9f5;
+      position: relative;
+    }
+    #pricing-2383 .cs-container {
+      width: 100%;
+      max-width: 80em;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* 48px - 64px */
+      gap: clamp(3rem, 6vw, 4rem);
+      position: relative;
+    }
+    #pricing-2383 .cs-content {
+      /* set text align to left if content needs to be left aligned */
+      text-align: center;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      /* centers content horizontally, set to flex-start to left align */
+      align-items: center;
+      position: relative;
+      z-index: 10;
+    }
+    #pricing-2383 .cs-title {
+      margin: 0;
+    }
+    #pricing-2383 .cs-card-group {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      align-items: stretch;
+      /* 16px - 20px */
+      gap: clamp(1rem, 1.8vw, 1.25rem);
+      position: relative;
+      z-index: 10;
+    }
+    #pricing-2383 .cs-item {
+      text-align: left;
+      list-style: none;
+      width: 100%;
+      max-width: 31.25rem;
+      margin: 0;
+      padding-top: 3.75rem;
+      border-radius: 1rem;
+      overflow: hidden;
+      /* prevents padding and border from affecting height and width */
+      box-sizing: border-box;
+      display: flex;
+      grid-column: span 12;
+      flex-direction: column;
+      align-items: stretch;
+      position: relative;
+      z-index: 1;
+    }
+    #pricing-2383 .cs-item.cs-popular .cs-flex {
+      border-color: var(--primary);
+    }
+    #pricing-2383 .cs-item.cs-popular .cs-price {
+      color: var(--secondary);
+    }
+    #pricing-2383 .cs-item.cs-popular .cs-price-button {
+      background-color: var(--primary);
+      color: var(--headerColor);
+      border: none;
+    }
+    #pricing-2383 .cs-item.cs-popular .cs-price-button:hover {
+      color: #fff;
+    }
+    #pricing-2383 .cs-wrapper {
+      height: 100%;
+      /* 24px - 48px top *
+            /* 16px - 48px left & right */
+      padding: clamp(1.25rem, 4vw, 3rem) clamp(1rem, 5vw, 3rem);
+      border-radius: 1rem;
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+    }
+    #pricing-2383 .cs-flex {
+      /* 126px - 170px */
+      min-height: clamp(7.875rem, 10vw, 10.625rem);
+      /* 24px - 32px */
+      margin-bottom: clamp(1.5rem, 3vw, 2rem);
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid #d2d8df;
+    }
+    #pricing-2383 .cs-package {
+      /* 16px - 20px */
+      font-size: clamp(1rem, 1.4vw, 1.25rem);
+      line-height: 1.2em;
+      text-align: inherit;
+      font-weight: 700;
+      margin: 0 0 0.5rem 0;
+      color: var(--headerColor);
+      display: block;
+    }
+    #pricing-2383 .cs-price {
+      /* 25px - 39px */
+      font-size: clamp(1.5625rem, 5vw, 2.4375rem);
+      line-height: 1.2em;
+      text-align: inherit;
+      font-weight: 900;
+      margin: 0;
+      color: var(--primary);
+    }
+    #pricing-2383 .cs-desc {
+      /* 14px - 16px */
+      font-size: clamp(0.875rem, 5vw, 1rem);
+      line-height: 1.5em;
+      text-align: inherit;
+      font-weight: 400;
+      /* 16px - 24px */
+      margin: 0 0 clamp(1rem, 2vw, 1.5rem);
+      color: var(--bodyTextColor);
+      display: block;
+    }
+    #pricing-2383 .cs-item-text {
+      font-size: var(--bodyFontSize);
+      line-height: 1.5em;
+      margin: 0 0 2rem;
+      color: var(--bodyTextColor);
+    }
+    #pricing-2383 .cs-button-solid {
+      font-size: 1rem;
+      /* 46px - 56px */
+      line-height: clamp(2.875em, 5.5vw, 3.5em);
+      text-decoration: none;
+      font-weight: 700;
+      text-align: center;
+      margin: 0;
+      color: #fff;
+      min-width: 9.375rem;
+      padding: 0 1.5rem;
+      border-radius: 6.25rem;
+      overflow: hidden;
+      background-color: var(--primary);
+      display: inline-block;
+      position: relative;
+      z-index: 1;
+      /* prevents padding from adding to the width */
+      box-sizing: border-box;
+    }
+    #pricing-2383 .cs-button-solid:before {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 0%;
+      background: #000;
+      opacity: 1;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      border-radius: 0.25rem;
+      transition: width 0.3s;
+    }
+    #pricing-2383 .cs-button-solid:hover:before {
+      width: 100%;
+    }
+    #pricing-2383 .cs-price-button {
+      width: 100%;
+      margin-top: auto;
+      background-color: transparent;
+      border: 1px solid var(--primary);
+      color: var(--primary);
+      transition: background-color 0.3s;
+    }
+    #pricing-2383 .cs-price-button:hover {
+      background-color: var(--primary);
+      color: var(--bodyTextColorWhite);
+    }
+    #pricing-2383 .cs-price-button:before {
+      background-color: var(--primary);
+    }
+    #pricing-2383 .cs-picture {
+      width: 100%;
+      height: 16.75rem;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+    #pricing-2383 .cs-picture img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      position: absolute;
+      left: 0;
+      right: 0;
+      object-fit: cover;
+    }
+  }
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #pricing-2383 .cs-item {
+      grid-column: span 4;
+    }
+  }
+
+  /*-- -------------------------- -->
+<---   Side By Side Reverse     -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #sbsr-1279 {
+      padding: var(--sectionPadding);
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+    }
+    #sbsr-1279 .cs-container {
+      width: 100%;
+      /* changes to 1280px at desktop */
+      max-width: 53.125rem;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      flex-direction: column;
+      /* 48px - 108px */
+      gap: clamp(3rem, 5vw, 6.75rem);
+    }
+    #sbsr-1279 .cs-content {
+      /* set text align to left if content needs to be left aligned */
+      text-align: left;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      /* centers content horizontally, set to flex-start to left align */
+      align-items: flex-start;
+      /* sends it to the bottom in the 2nd position */
+      order: 2;
+    }
+
+    #sbsr-1279 .cs-title {
+      max-width: 20ch;
+    }
+    #sbsr-1279 .cs-text {
+      margin-bottom: 1rem;
+    }
+    #sbsr-1279 .cs-text:last-of-type {
+      margin-bottom: 2rem;
+    }
+    #sbsr-1279 .cs-button-solid {
+      font-size: 1rem;
+      /* 46px - 56px */
+      line-height: clamp(2.875em, 5.5vw, 3.5em);
+      text-decoration: none;
+      font-weight: 700;
+      text-align: center;
+      margin: 0;
+      color: #fff;
+      border: none;
+      min-width: 9.375rem;
+      padding: 0 1.5rem;
+      background-color: var(--primary);
+      border-radius: 0.25rem;
+      overflow: hidden;
+      display: inline-block;
+      position: relative;
+      z-index: 1;
+      /* prevents padding from adding to the width */
+      box-sizing: border-box;
+      transition: color 0.3s;
+    }
+    #sbsr-1279 .cs-button-solid:before {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 0%;
+      background: #000;
+      opacity: 1;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      transition: width 0.3s;
+    }
+    #sbsr-1279 .cs-button-solid:hover {
+      color: #fff;
+    }
+    #sbsr-1279 .cs-button-solid:hover:before {
+      width: 100%;
+    }
+    #sbsr-1279 .cs-picture {
+      width: 100%;
+      /* 456px - 598px */
+      height: clamp(28.5rem, 46vw, 37.375rem);
+      border-radius: 1.25rem;
+      overflow: hidden;
+      display: block;
+      /* sends it to the bottom in the 2nd position */
+      order: 2;
+      position: relative;
+      z-index: 1;
+    }
+    #sbsr-1279 .cs-picture:before {
+      /* black overlay */
+      content: "";
+      width: 100%;
+      height: 100%;
+      background: #1a1a1a;
+      opacity: 0.3;
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+    #sbsr-1279 .cs-picture img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    #sbsr-1279 .cs-background {
+      width: 100%;
+      height: 50%;
+      background-color: #1a1a1a;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+    #sbsr-1279 .cs-background img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #sbsr-1279 .cs-content {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      row-gap: 2rem;
+    }
+    #sbsr-1279 .cs-flex {
+      width: 45%;
+    }
+    #sbsr-1279 .cs-title {
+      margin: 0;
+    }
+    #sbsr-1279 .cs-text {
+      width: 50%;
+    }
+    #sbsr-1279 .cs-button-solid {
+      margin-right: auto;
+    }
+  }
+  /* Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #sbsr-1279 {
+      /* moved padding back to the section container */
+      padding: var(--sectionPadding);
+    }
+    #sbsr-1279 .cs-container {
+      max-width: 80rem;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+    #sbsr-1279 .cs-content {
+      width: 100%;
+      max-width: 27.0625rem;
+      margin: 0;
+      flex-direction: column;
+      row-gap: 0;
+      order: 1;
+    }
+    #sbsr-1279 .cs-flex {
+      width: 100%;
+    }
+    #sbsr-1279 .cs-title {
+      margin: 0 0 1rem 0;
+      color: var(--headerColor);
+    }
+    #sbsr-1279 .cs-text {
+      width: 100%;
+    }
+    #sbsr-1279 .cs-picture {
+      max-width: 46.125rem;
+    }
+    #sbsr-1279 .cs-background {
+      width: 60vw;
+      height: 100%;
+      /* 172px - 336px */
+      margin-left: clamp(11.125rem, 30vw, 21rem);
+      left: 50%;
+      top: 0;
+    }
+  }
+</style>
