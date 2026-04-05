@@ -5,7 +5,7 @@
  */
 
 :root {
-  --accent: #ff6b3e;
+  --accent: #ff1fe4;
   --accent-dark: #000d8a;
   --black: 15, 18, 25;
   --gray: 96, 115, 159;
@@ -31,7 +31,7 @@
   font-display: swap;
 }
 body {
-  font-family: "Atkinson", sans-serif;
+  font-family: "Inter", sans-serif;
   margin: 0;
   padding: 0;
   text-align: left;
@@ -153,7 +153,7 @@ hr {
 
 :root {
   /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
-  --primary: #ff6a3e;
+  --primary: #ff1fe4;
   --primaryLight: #ffba43;
   --secondary: #ffba43;
   --secondaryLight: #ffba43;

@@ -3,30 +3,40 @@
   <defs>
     <style>
       .cls-1 {
-        font-size: 68px;
+      font-size: 68px;
       }
 
       .cls-1, .cls-2 {
-        font-family: ShreeDev0714, 'Shree Devanagari 714';
+      font-family: ShreeDev0714, 'Shree Devanagari 714';
       }
 
       .cls-2 {
-        font-size: 72px;
+      font-size: 72px;
       }
 
       .cls-3 {
-        fill: #ff6b3e;
-        font-family: MicrosoftSansSerif, 'Microsoft Sans Serif';
-        font-size: 269.44px;
+      fill: #ff1fe4;
+      font-family: MicrosoftSansSerif, 'Microsoft Sans Serif';
+      font-size: 269.44px;
       }
     </style>
   </defs>
   <g id="Layer_1-2" data-name="Layer 1">
-    <text class="cls-3" transform="translate(0 231.16) scale(1.16 1)"><tspan x="0" y="0">1</tspan></text>
-    <text class="cls-3" transform="translate(197.08 231.16) scale(1.16 1)"><tspan x="0" y="0">1</tspan></text>
-    <text class="cls-3" transform="translate(105.32 231.16) scale(1.16 1)"><tspan x="0" y="0">4</tspan></text>
-    <text class="cls-2" transform="translate(315.74 230.52)"><tspan x="0" y="0">studios</tspan></text>
-    <text class="cls-1" transform="translate(314.64 170.7)"><tspan x="0" y="0">web</tspan></text>
-    <text/>
+    <text class="cls-3" transform="translate(0 231.16) scale(1.16 1)">
+      <tspan x="0" y="0">1</tspan>
+    </text>
+    <text class="cls-3" transform="translate(197.08 231.16) scale(1.16 1)">
+      <tspan x="0" y="0">1</tspan>
+    </text>
+    <text class="cls-3" transform="translate(105.32 231.16) scale(1.16 1)">
+      <tspan x="0" y="0">4</tspan>
+    </text>
+    <text class="cls-2" transform="translate(315.74 230.52)">
+      <tspan x="0" y="0">studios</tspan>
+    </text>
+    <text class="cls-1" transform="translate(314.64 170.7)">
+      <tspan x="0" y="0">web</tspan>
+    </text>
+    <text />
   </g>
 </svg>
