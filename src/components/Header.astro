@@ -2,12 +2,14 @@
 import { Image } from "astro:assets";
 import { SITE_TITLE } from "../consts";
 import HeaderLink from "./HeaderLink.astro";
-import logo from "../assets/fullLogo.svg";
+import logo from "../assets/logo-v3.svg";
 ---
 
 <header>
   <nav>
-    <a href="/"><Image src={logo} alt={SITE_TITLE} width={200} /></a>
+    <a href="/"
+      ><Image src={logo} alt={SITE_TITLE} width={200} class="logo" /></a
+    >
     <div class="internal-links">
       <HeaderLink href="/">Home</HeaderLink>
       <HeaderLink href="/blog">Blog</HeaderLink>
@@ -52,6 +54,11 @@ import logo from "../assets/fullLogo.svg";
     background: white;
     box-shadow: 0 2px 8px rgba(var(--black), 5%);
   }
+
+  .logo {
+    border-radius: 0;
+  }
+
   h2 {
     margin: 0;
     font-size: 1em;

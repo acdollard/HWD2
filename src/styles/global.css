@@ -5,11 +5,12 @@
  */
 
 :root {
-  --accent: #ff1fe4;
+  --accent: #e918d0;
   --accent-dark: #000d8a;
   --black: 15, 18, 25;
   --gray: 96, 115, 159;
   --gray-light: 229, 233, 240;
+  --gray-lighter: #767676;
   --gray-dark: 34, 41, 57;
   --gray-gradient: rgba(var(--gray-light), 50%), #fff;
   --box-shadow:
@@ -18,14 +19,14 @@
 }
 @font-face {
   font-family: "Atkinson";
-  src: url("/fonts/atkinson-regular.woff") format("woff");
+  src: url("/fonts/shree-devanagari-714.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Atkinson";
-  src: url("/fonts/atkinson-bold.woff") format("woff");
+  src: url("/fonts/shree-devanagari-714.ttf") format("ttf");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -153,8 +154,9 @@ hr {
 
 :root {
   /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
-  --primary: #ff1fe4;
-  --primaryLight: #ffba43;
+  --primary: #e918d0;
+  --primaryLight: #d687af;
+  --primaryDark: #9d4371;
   --secondary: #ffba43;
   --secondaryLight: #ffba43;
   --headerColor: #1a1a1a;
