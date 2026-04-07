@@ -204,10 +204,7 @@ import alexImage from "../assets/alex.jpg";
         <div class="cs-container">
           <picture class="cs-picture">
             <!--Mobile Image-->
-            <source
-              media="(max-width: 600px)"
-              srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/sbs-construction.jpg"
-            />
+            <source media="(max-width: 600px)" srcset={alexImage.src} />
             <!--Tablet and above Image-->
             <source media="(min-width: 601px)" srcset={alexImage.src} />
             <img
@@ -221,7 +218,7 @@ import alexImage from "../assets/alex.jpg";
           </picture>
           <div class="cs-content">
             <div class="cs-flex">
-              <span class="cs-topper">Why should I care?</span>
+              <span class="cs-topper">Why should You care?</span>
               <h2 class="cs-title">My Philosophy</h2>
             </div>
             <p class="cs-text">
