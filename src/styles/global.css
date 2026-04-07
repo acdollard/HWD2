@@ -18,25 +18,24 @@
     0 16px 32px rgba(var(--gray), 33%);
 }
 @font-face {
-  font-family: "Atkinson";
+  font-family: "Shree Devanagari 714";
   src: url("/fonts/shree-devanagari-714.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Atkinson";
+  font-family: "Shree Devanagari 714";
   src: url("/fonts/shree-devanagari-714.ttf") format("ttf");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 body {
-  font-family: "Inter", sans-serif;
+  font-family: "Shree Devanagari 714", sans-serif;
   margin: 0;
   padding: 0;
   text-align: left;
-  background: linear-gradient(var(--gray-gradient)) no-repeat;
   background-size: 100% 600px;
   word-wrap: break-word;
   overflow-wrap: break-word;
@@ -206,11 +205,12 @@ body {
 }
 
 .cs-text {
-  font-size: var(--bodyFontSize);
+  font-size: 1.25rem;
   line-height: 1.5em;
   text-align: inherit;
   width: 100%;
-  max-width: 40.625rem;
-  margin: 0;
-  color: var(--bodyTextColor);
+  /* 464px - 622px */
+  max-width: clamp(29rem, 60vw, 38.785rem);
+  margin: 0 0 2.5rem 0;
+  color: var(--gray-lighter);
 }

@@ -3,6 +3,7 @@ import BaseHead from "../components/BaseHead.astro";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
+import alexImage from "../assets/alex.jpg";
 ---
 
 <!doctype html>
@@ -132,24 +133,22 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
         <div class="cs-container">
           <div class="cs-content">
             <span class="cs-topper">Pricing</span>
-            <h2 class="cs-title">Prioritize Your Health and Happiness</h2>
+            <h2 class="cs-title">
+              Pricing Options That Work for Your Business
+            </h2>
           </div>
           <ul class="cs-card-group">
             <li class="cs-item">
               <div class="cs-wrapper">
                 <div class="cs-flex">
-                  <h3 class="cs-package">Personal Therapy</h3>
-                  <span class="cs-price">$170-$190</span>
-                  <span class="cs-desc"> per session </span>
+                  <h3 class="cs-package">Copywriting</h3>
+                  <span class="cs-price">$250</span>
+                  <span class="cs-desc"> +25/mo. Hosting </span>
                 </div>
                 <p class="cs-item-text">
-                  Customized sessions focused on overcoming fears, enhancing
-                  well-being, and fostering personal development. Experience
-                  support tailored just for you.
+                  Up to 5 static pages, custom designed.
                 </p>
-                <a href="" class="cs-button-solid cs-price-button"
-                  >Book a Session</a
-                >
+                <a href="" class="cs-button-solid cs-price-button">Holler</a>
               </div>
               <picture class="cs-picture">
                 <!--Mobile Image-->
@@ -176,17 +175,14 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
             <li class="cs-item cs-popular">
               <div class="cs-wrapper">
                 <div class="cs-flex">
-                  <h3 class="cs-package">Relationship Therapy</h3>
-                  <span class="cs-price">$170-$190</span>
-                  <span class="cs-desc"> per session </span>
+                  <h3 class="cs-package">Base Package</h3>
+                  <span class="cs-price">$2000</span>
+                  <span class="cs-desc"> flat rate </span>
                 </div>
                 <p class="cs-item-text">
-                  Customized sessions focused on overcoming fears, enhancing
-                  well-being, and fostering personal development. Experience
-                  support tailored just for you.
+                  Up to six static pages, custom designed, with
                 </p>
-                <a href="" class="cs-button-solid cs-price-button"
-                  >Book a Session</a
+                <a href="" class="cs-button-solid cs-price-button">Let's Talk</a
                 >
               </div>
               <picture class="cs-picture">
@@ -266,14 +262,11 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
               srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/sbs-construction.jpg"
             />
             <!--Tablet and above Image-->
-            <source
-              media="(min-width: 601px)"
-              srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/sbs-construction.jpg"
-            />
+            <source media="(min-width: 601px)" srcset={alexImage.src} />
             <img
               loading="lazy"
               decoding="async"
-              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/sbs-construction.jpg"
+              src={alexImage.src}
               alt="construction"
               width="738"
               height="598"
@@ -396,7 +389,8 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
       padding: clamp(5.625rem, 1vw, 25rem) 1rem 0;
       /* 200px - 250px */
       padding-bottom: clamp(12.5rem, 16.5vw, 15.625rem);
-      overflow: visible;
+      overflow-y: visible;
+      overflow-x: clip;
       position: relative;
       z-index: 10;
     }
@@ -685,18 +679,7 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
       /* centers content horizontally, set to flex-start to left align */
       align-items: center;
     }
-    #sbs-1359 .cs-topper {
-      /* Override.  cs-topper cs-title and first cs-text should be removed and put into your global css sheet so it can control every instance of them on your site and is consistent. This selector is a section specific override that stays inside this stitch */
-      color: #767676;
-    }
-    #sbs-1359 .cs-title {
-      /* Override.  cs-topper cs-title and first cs-text should be removed and put into your global css sheet so it can control every instance of them on your site and is consistent. This selector is a section specific override that stays inside this stitch */
-      max-width: 25ch;
-    }
-    #sbs-1359 .cs-text {
-      /* Override.  cs-topper cs-title and first cs-text should be removed and put into your global css sheet so it can control every instance of them on your site and is consistent. This selector is a section specific override that stays inside this stitch */
-      margin-bottom: 1rem;
-    }
+
     #sbs-1359 .cs-text:last-of-type {
       margin-bottom: 2rem;
     }
@@ -937,7 +920,7 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
       height: 19.0625rem;
       margin: 0;
       padding: 0;
-      background-color: radial-gradient(
+      background: radial-gradient(
         circle,
         rgba(60, 60, 60, 1) 0%,
         rgba(18, 18, 18, 1) 100%
@@ -1005,7 +988,7 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
       display: block;
       height: 100%;
       width: 100%;
-      background-color: #000;
+
       opacity: 0.4;
       top: 0;
       left: 0;
@@ -1053,7 +1036,6 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
   @media only screen and (min-width: 0rem) {
     #pricing-2383 {
       padding: var(--sectionPadding);
-      background-color: #fbf9f5;
       position: relative;
     }
     #pricing-2383 .cs-container {
@@ -1112,7 +1094,7 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
       z-index: 1;
     }
     #pricing-2383 .cs-item.cs-popular .cs-flex {
-      border-color: var(--primary);
+      border-color: var(--gray);
     }
     #pricing-2383 .cs-item.cs-popular .cs-price {
       color: var(--secondary);
@@ -1267,6 +1249,7 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
       overflow: hidden;
       position: relative;
       z-index: 1;
+      background-color: #f7f7f7;
     }
     #sbsr-1279 .cs-container {
       width: 100%;
@@ -1352,6 +1335,7 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
       order: 2;
       position: relative;
       z-index: 1;
+      background-size: contain;
     }
     #sbsr-1279 .cs-picture:before {
       /* black overlay */
@@ -1373,11 +1357,17 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
       position: absolute;
       top: 0;
       left: 0;
+      object-fit: cover;
+      object-position: center top;
     }
     #sbsr-1279 .cs-background {
       width: 100%;
       height: 50%;
-      background-color: #1a1a1a;
+      background: radial-gradient(
+        circle,
+        rgba(60, 60, 60, 1) 0%,
+        rgba(18, 18, 18, 1) 100%
+      );
       display: block;
       position: absolute;
       top: 0;
