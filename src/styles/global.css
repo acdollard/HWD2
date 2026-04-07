@@ -12,7 +12,17 @@
   --gray-light: 229, 233, 240;
   --gray-lighter: #767676;
   --gray-dark: 34, 41, 57;
-  --gray-gradient: rgba(var(--gray-light), 50%), #fff;
+  --gray-gradient: radial-gradient(
+    circle,
+    rgba(60, 60, 60, 1) 0%,
+    rgba(18, 18, 18, 1) 100%
+  );
+  --primary-gradient: radial-gradient(
+    circle,
+    rgb(229, 93, 213) 0%,
+
+    var(--primary) 100%
+  );
   --box-shadow:
     0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
     0 16px 32px rgba(var(--gray), 33%);
@@ -154,9 +164,9 @@ hr {
 :root {
   /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
   --primary: #e918d0;
-  --primaryLight: #d687af;
+  --primaryLight: rgb(229, 93, 213);
   --primaryDark: #9d4371;
-  --secondary: #ffba43;
+  --secondary: rgb(24, 233, 49);
   --secondaryLight: #ffba43;
   --headerColor: #1a1a1a;
   --bodyTextColor: #4e4b66;
