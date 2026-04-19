@@ -4,6 +4,9 @@ import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
 import alexImage from "../assets/alex.jpg";
+import georgegallery from "../assets/gg-art.png";
+import pafa from "../assets/pafa.png";
+import buried from "../assets/buried.png";
 ---
 
 <!doctype html>
@@ -52,16 +55,13 @@ import alexImage from "../assets/alex.jpg";
         <div class="cs-container">
           <div class="cs-content">
             <span class="cs-topper"></span>
-            <h2 class="cs-title">
-              Just because technology is so uniquitous doesn't mean it should
-              lose the human touch. Let's build up your business, together.
-            </h2>
+            <h2 class="cs-title">Let's build up your business, together.</h2>
           </div>
           <ul class="cs-card-group">
             <li class="cs-item">
               <a href="" class="cs-link">
                 <h3 class="cs-h3">
-                  <span class="cs-span">Design &</span> Development
+                  <span class="cs-span">Website Design &</span> Development
                 </h3>
               </a>
               <picture class="cs-background"> </picture>
@@ -125,7 +125,6 @@ import alexImage from "../assets/alex.jpg";
               decoding="async"
               src={alexImage.src}
               alt="Alex in a Jiu Jitsu Gi"
-              width="738"
               height="598"
             />
           </picture>
@@ -174,49 +173,78 @@ import alexImage from "../assets/alex.jpg";
             <li class="cs-item">
               <div class="cs-wrapper">
                 <div class="cs-flex">
-                  <h3 class="cs-package">Copywriting</h3>
-                  <span class="cs-price">$350</span>
-                  <span class="cs-desc"> </span>
+                  <picture>
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset={pafa.src} />
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset={pafa.src} />
+                    <img
+                      loading="lazy"
+                      decoding="async"
+                      src={pafa.src}
+                      alt="Alex in a Jiu Jitsu Gi"
+                      height="300"
+                    />
+                  </picture>
                 </div>
-                <p class="cs-item-text">
-                  AI does a bad job with this. As a lifelong human, I can
-                  guarantee an authentic voice that captures the essence of your
-                  brand, because I will actually get to know you and your brand.
-                </p>
-                <a href="" class="cs-button-solid cs-price-button">Holler</a>
-              </div>
-            </li>
-            <li class="cs-item cs-popular">
-              <div class="cs-wrapper">
-                <div class="cs-flex">
-                  <h3 class="cs-package">Base Package</h3>
-                  <span class="cs-price">$2000</span>
-                  <span class="cs-desc"> +25/mo. Hosting </span>
-                </div>
-                <p class="cs-item-text">
-                  Up to six static pages, custom designed, with performance
-                  optimization and accessibility best practices standard.
-                  Unlimimited content edits for 30 days after launch, and 25/mo.
-                  hosting after that.
-                </p>
-                <a href="" class="cs-button-solid cs-price-button">Let's Talk</a
+                <a
+                  href="https://peteranthonyfineart.com/"
+                  class="cs-button-solid cs-price-button"
+                  target="_blank">Visit Live Site</a
                 >
               </div>
             </li>
             <li class="cs-item">
               <div class="cs-wrapper">
                 <div class="cs-flex">
-                  <h3 class="cs-package">Blog or ECommerce Funcationality</h3>
-                  <span class="cs-price">per request</span>
-                  <span class="cs-desc"> </span>
+                  <picture>
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset={buried.src} />
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset={buried.src} />
+                    <img
+                      loading="lazy"
+                      decoding="async"
+                      src={buried.src}
+                      alt="Alex in a Jiu Jitsu Gi"
+                      height="300"
+                    />
+                  </picture>
                 </div>
-                <p class="cs-item-text">
-                  If you need your site to feature a blog or any kind of custom
-                  functionality, this is where we can arrive at a custom quote
-                  depending on the scope of the feature.
-                </p>
-                <a href="" class="cs-button-solid cs-price-button"
-                  >Book a Session</a
+                <a
+                  href="https://buriedinthebones.com/"
+                  class="cs-button-solid cs-price-button"
+                  target="_blank">Visit Live Site</a
+                >
+              </div>
+            </li>
+            <li class="cs-item">
+              <div class="cs-wrapper">
+                <div class="cs-flex">
+                  <picture>
+                    <!--Mobile Image-->
+                    <source
+                      media="(max-width: 600px)"
+                      srcset={georgegallery.src}
+                    />
+                    <!--Tablet and above Image-->
+                    <source
+                      media="(min-width: 601px)"
+                      srcset={georgegallery.src}
+                    />
+                    <img
+                      loading="lazy"
+                      decoding="async"
+                      src={georgegallery.src}
+                      alt="Alex in a Jiu Jitsu Gi"
+                      height="300"
+                    />
+                  </picture>
+                </div>
+                <a
+                  href="https://georgegalleryart.com/"
+                  class="cs-button-solid cs-price-button"
+                  target="_blank">Visit Live Site</a
                 >
               </div>
             </li>
