@@ -162,7 +162,12 @@ import buried from "../assets/buried.png";
               src={alexImage.src}
               alt="Alex in a Jiu Jitsu Gi"
               height="598"
+              width="400"
             />
+            <div class="image-description">
+              Alex Dollard, Founder, in his natural environment on the jiu-jitsu
+              mats.
+            </div>
           </picture>
           <div class="cs-content">
             <div class="cs-flex">
@@ -208,7 +213,7 @@ import buried from "../assets/buried.png";
                       loading="lazy"
                       decoding="async"
                       src={pafa.src}
-                      alt="Alex in a Jiu Jitsu Gi"
+                      alt="screenshot of the Peter Anthony Fine Art website"
                       height="300"
                     />
                   </picture>
@@ -232,7 +237,7 @@ import buried from "../assets/buried.png";
                       loading="lazy"
                       decoding="async"
                       src={buried.src}
-                      alt="Alex in a Jiu Jitsu Gi"
+                      alt="screenshot of the Buried in the Bones website"
                       height="300"
                     />
                   </picture>
@@ -262,7 +267,7 @@ import buried from "../assets/buried.png";
                       loading="lazy"
                       decoding="async"
                       src={georgegallery.src}
-                      alt="Alex in a Jiu Jitsu Gi"
+                      alt="screenshot of the George Gallery Art website"
                       height="300"
                     />
                   </picture>
@@ -292,32 +297,40 @@ import buried from "../assets/buried.png";
             <li class="cs-item">
               <a href="" class="cs-link">
                 <h3 class="cs-h3">
-                  <span class="cs-span">Step One:</span><br /> Reach out and schedule
-                  a free "deep consultation", either in person or virtually.
+                  <span class="cs-span">Step One:</span><br />
                 </h3>
+                <p class="cs-text">
+                  Reach out and schedule a free, 60-minute "deep consultation."
+                </p>
               </a>
               <picture class="cs-background"> </picture>
             </li>
             <li class="cs-item">
               <a href="" class="cs-link">
                 <h3 class="cs-h3">
-                  <span class="cs-span">Step Two:</span><br /> I get to know you,
+                  <span class="cs-span">Step Two:</span><br />
+                </h3>
+                <p class="cs-text">
+                  We meet, either in person or virtually, and I get to know you,
                   your business, and your goals.
-                </h3>
+                </p>
               </a>
               <picture class="cs-background"> </picture>
             </li>
             <li class="cs-item">
               <a href="" class="cs-link">
                 <h3 class="cs-h3">
-                  <span class="cs-span">Step Three:</span><br /> I get back to you
-                  with an outline of the project, a quote, and a timeline.
+                  <span class="cs-span">Step Three:</span><br />
                 </h3>
+                <p class="cs-text">
+                  I get back to you with an outline of the project, a quote, and
+                  a timeline.
+                </p>
               </a>
               <picture class="cs-background"> </picture>
             </li>
           </ul>
-          <a href="" class="cs-button-solid">Book A Consultation</a>
+          <a href="" class="cs-button-solid">Let's Get Started</a>
         </div>
       </section>
       <!-- ============================================ -->
@@ -883,6 +896,7 @@ import buried from "../assets/buried.png";
       /* prevents padding from affecting height and width */
       box-sizing: border-box;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
     }
@@ -898,6 +912,12 @@ import buried from "../assets/buried.png";
     #services-1359 .cs-span {
       /* forces the h3 to alwasy be two lines */
       display: block;
+    }
+
+    #services-1359 .cs-text {
+      font-size: 1.2rem;
+      color: var(--bodyTextColorWhite);
+      line-height: 1.5rem;
     }
     #services-1359 .cs-background {
       width: 100%;
@@ -923,16 +943,6 @@ import buried from "../assets/buried.png";
       transition:
         background-color 0.3s,
         opacity 0.3s;
-    }
-    #services-1359 .cs-background img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      /* Makes img tag act as a background image */
-      object-fit: cover;
-      transition: transform 0.6s;
     }
   }
   /* Tablet - 600px */
@@ -1065,15 +1075,6 @@ import buried from "../assets/buried.png";
       color: var(--headerColor);
       display: block;
     }
-    #pricing-2383 .cs-price {
-      /* 25px - 39px */
-      font-size: clamp(1.5625rem, 5vw, 2.4375rem);
-      line-height: 1.2em;
-      text-align: inherit;
-      font-weight: 900;
-      margin: 0;
-      color: var(--primary);
-    }
     #pricing-2383 .cs-desc {
       /* 14px - 16px */
       font-size: clamp(0.875rem, 5vw, 1rem);
@@ -1148,44 +1149,6 @@ import buried from "../assets/buried.png";
     #sbsr-1279 .cs-button-solid {
       margin-right: auto;
     }
-    #sbsr-1279 .cs-picture {
-      width: 100%;
-      /* 456px - 598px */
-      height: clamp(18.5rem, 36vw, 67.375rem);
-      border-radius: 1.25rem;
-      overflow: hidden;
-      display: flex;
-      justify-content: center;
-      flex-direction: row;
-      /* sends it to the bottom in the 2nd position */
-      order: 2;
-      position: relative;
-      z-index: 1;
-    }
-    #sbsr-1279 .cs-picture:before {
-      /* black overlay */
-      content: "";
-      width: 100%;
-      height: 100%;
-      background: #1a1a1a;
-      opacity: 0.3;
-      position: absolute;
-      display: block;
-      top: 0;
-      left: 0;
-      z-index: 1;
-      border-radius: 1.25rem;
-    }
-    #sbsr-1279 .cs-picture img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      position: absolute;
-      top: 0;
-      left: 0;
-      object-fit: cover;
-      object-position: center top;
-    }
   }
   /* Tablet - 768px */
   @media only screen and (min-width: 48rem) {
@@ -1218,7 +1181,7 @@ import buried from "../assets/buried.png";
       max-width: 80rem;
       flex-direction: row;
       align-items: center;
-      justify-content: space-between;
+      justify-content: space-evenly;
     }
     #sbsr-1279 .cs-content {
       width: 100%;
@@ -1240,7 +1203,22 @@ import buried from "../assets/buried.png";
     }
     #sbsr-1279 .cs-picture {
       max-width: 46.125rem;
+      position: relative;
     }
+
+    #sbsr-1279 .image-description {
+      background-color: var(--bodyTextColorWhite);
+      color: var(--bodyTextColor);
+      font-size: 0.875rem;
+      line-height: 1.5em;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      max-width: 190px;
+      position: absolute;
+      bottom: 2rem;
+      right: 1rem;
+    }
+
     #sbsr-1279 .cs-background {
       width: 60vw;
       height: 100%;
