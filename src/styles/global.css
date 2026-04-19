@@ -224,3 +224,75 @@ body {
   margin: 0 0 2.5rem 0;
   color: var(--gray-lighter);
 }
+
+.cs-button-solid {
+  position: relative;
+  display: inline-block;
+  font-size: 1rem;
+  line-height: 3rem;
+  text-align: center;
+  overflow: hidden;
+  margin: 0;
+  padding: 0 3rem;
+  color: #fff;
+  background-color: var(--primary);
+  border-radius: 0.25rem;
+  transition: color 0.3s;
+  z-index: 1;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.cs-button-solid::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #1a1a1a;
+  opacity: 1;
+  display: block;
+  transition: width 0.3s;
+  z-index: -1;
+}
+
+.cs-button-solid:hover {
+  color: var(--primary);
+}
+
+.cs-button-solid:hover::before {
+  width: 100%;
+}
+
+.cs-button-outline {
+  display: inline-block;
+  font-size: 1rem;
+  line-height: 3rem;
+  overflow: hidden;
+  margin: 0;
+  padding: 0 3rem;
+  color: var(-primary);
+  background-color: transparent;
+  border: 1px solid var(--primary);
+  border-radius: 0.25rem;
+  transition: background-color 0.3s;
+}
+
+.cs-button-outline:hover {
+  color: var(--bodyTextColorWhite);
+}
+
+.cs-button-outline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: var(--primary);
+}
+
+.cs-button-outline:hover::before {
+  width: 100%;
+}
