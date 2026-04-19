@@ -5,10 +5,14 @@
  */
 
 :root {
-  --accent: #e918d0;
-  --accent-dark: #000d8a;
-  --black: 15, 18, 25;
-  --gray: 96, 115, 159;
+  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  /* --primary: #2e6f40; */
+  --primary: #e921d0;
+  --primaryLight: #9effdf;
+  --primaryDark: #17442d;
+  --accent: #e921d0;
+  --headerColor: #1a1a1a;
+  --bodyTextColorWhite: #fafbfc;
   --gray-light: 229, 233, 240;
   --gray-lighter: #767676;
   --gray-dark: 34, 41, 57;
@@ -19,13 +23,29 @@
   );
   --primary-gradient: radial-gradient(
     circle,
-    rgb(229, 93, 213) 0%,
+    var(--primaryDark) 0%,
 
     var(--primary) 100%
   );
-  --box-shadow:
-    0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
-    0 16px 32px rgba(var(--gray), 33%);
+  /* 13px - 16px */
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  /* 31px - 49px */
+  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --bodyFontSize: 1rem;
+  /* 60px - 100px top and bottom */
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*:before,
+*:after {
+  /* prevents padding from affecting height and width */
+  box-sizing: border-box;
 }
 @font-face {
   font-family: "Shree Devanagari 714";
@@ -70,7 +90,14 @@ h1 {
   font-size: 3.052em;
 }
 h2 {
-  font-size: 2.441em;
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
 }
 h3 {
   font-size: 1.953em;
@@ -161,36 +188,6 @@ hr {
   white-space: nowrap;
 }
 
-:root {
-  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
-  --primary: #e918d0;
-  --primaryLight: rgb(229, 93, 213);
-  --primaryDark: #9d4371;
-  --secondary: rgb(24, 233, 49);
-  --secondaryLight: #ffba43;
-  --headerColor: #1a1a1a;
-  --bodyTextColor: #4e4b66;
-  --bodyTextColorWhite: #fafbfc;
-  /* 13px - 16px */
-  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
-  /* 31px - 49px */
-  --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
-  --bodyFontSize: 1rem;
-  /* 60px - 100px top and bottom */
-  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-}
-
-*,
-*:before,
-*:after {
-  /* prevents padding from affecting height and width */
-  box-sizing: border-box;
-}
 .cs-topper {
   font-size: var(--topperFontSize);
   line-height: 1.2em;
@@ -201,17 +198,6 @@ body {
   color: var(--primary);
   margin-bottom: 0.25rem;
   display: block;
-}
-
-.cs-title {
-  font-size: var(--headerFontSize);
-  font-weight: 900;
-  line-height: 1.2em;
-  text-align: inherit;
-  max-width: 43.75rem;
-  margin: 0 0 1rem 0;
-  color: var(--headerColor);
-  position: relative;
 }
 
 .cs-text {
@@ -229,14 +215,17 @@ body {
   position: relative;
   display: inline-block;
   font-size: 1rem;
-  line-height: 3rem;
+  line-height: clamp(2.875em, 5.5vw, 3.5em);
   text-align: center;
   overflow: hidden;
   margin: 0;
-  padding: 0 3rem;
+  min-width: 9.375rem;
+  padding: 0 1.5rem;
   color: #fff;
   background-color: var(--primary);
+  border: none;
   border-radius: 0.25rem;
+  box-sizing: border-box;
   transition: color 0.3s;
   z-index: 1;
   text-decoration: none;
@@ -253,6 +242,7 @@ body {
   background-color: #1a1a1a;
   opacity: 1;
   display: block;
+  border-radius: inherit;
   transition: width 0.3s;
   z-index: -1;
 }
