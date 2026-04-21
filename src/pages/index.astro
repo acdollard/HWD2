@@ -415,8 +415,8 @@ import buried from "../assets/buried.png";
     #hero-1351 .cs-content {
       /* set text align to left if content needs to be left aligned */
       text-align: left;
-      width: var(--max-width-mobile);
-      max-width: var(--max-width);
+      width: 100%;
+      max-width: var(--max-width-mobile);
       display: flex;
       flex-direction: column;
       /* centers content horizontally, set to flex-start to left align */
@@ -614,6 +614,10 @@ import buried from "../assets/buried.png";
       right: 50%;
       bottom: auto;
       left: auto;
+    }
+
+    #hero-1351 .cs-content {
+      max-width: var(--max-width);
     }
   }
 
