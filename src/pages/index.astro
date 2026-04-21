@@ -35,9 +35,9 @@ import buried from "../assets/buried.png";
               />For Your Small Business
             </h1>
             <p class="cs-text">
-              Providing you a personal web partner so you never have to worry
-              about your web presence again. Because getting an excellent
-              website shouldn't be stressful.
+              Giving you a personal web partner so you never have to worry about
+              your web presence again. Because getting an excellent website
+              shouldn't be stressful.
             </p>
             <a href="" class="cs-button-solid">Book A Consultation</a>
           </div>
@@ -55,7 +55,8 @@ import buried from "../assets/buried.png";
         <div class="cs-container">
           <div class="cs-content">
             <span class="cs-topper"></span>
-            <h2 class="cs-title">Let's build up your business, together.</h2>
+            <h2 class="cs-title">Let's Build Your Business.</h2>
+            <h3 class="cs-subtitle">Services:</h3>
           </div>
           <ul class="cs-card-group">
             <li class="cs-item">
@@ -116,7 +117,6 @@ import buried from "../assets/buried.png";
       <section id="sbs-1359">
         <div class="cs-container">
           <div class="cs-content">
-            <span class="cs-topper">Trust me, I get it.</span>
             <h2 class="cs-title">Launching A Website Can Be Daunting.</h2>
             <h3 class="cs-h3">
               Do you take it on yourself? Do you hire an overseas developer? Or
@@ -405,7 +405,7 @@ import buried from "../assets/buried.png";
     }
 
     #hero-1351 .cs-container {
-      width: 100%;
+      width: var(--max-width);
       margin: auto;
       display: flex;
       flex-direction: column;
@@ -415,8 +415,8 @@ import buried from "../assets/buried.png";
     #hero-1351 .cs-content {
       /* set text align to left if content needs to be left aligned */
       text-align: left;
-      width: 100%;
-      max-width: 1100px;
+      width: var(--max-width-mobile);
+      max-width: var(--max-width);
       display: flex;
       flex-direction: column;
       /* centers content horizontally, set to flex-start to left align */
@@ -574,10 +574,7 @@ import buried from "../assets/buried.png";
     }
   }
   /* Tablet - 768px */
-  @media only screen and (min-width: 48rem) {
-    #hero-1351 .cs-content {
-      width: 60%;
-    }
+  @media only screen and (min-width: 768px) {
     #hero-1351 .cs-bubbles {
       font-size: 1em;
     }
@@ -648,7 +645,7 @@ import buried from "../assets/buried.png";
       /* set text align to left if content needs to be left aligned */
       text-align: center;
       width: 100%;
-      max-width: 39.375rem;
+
       display: flex;
       flex-direction: column;
       /* centers content horizontally, set to flex-start to left align */
@@ -660,7 +657,7 @@ import buried from "../assets/buried.png";
     }
     #sbs-1359 .cs-h3 {
       /* 16px - 30px */
-      font-size: clamp(1rem, 2.4vw, 1.25rem);
+      font-size: clamp(1rem, 2.4vw, 1.75rem);
       line-height: 1.2em;
       font-weight: 700;
       max-width: 37ch;
@@ -668,6 +665,13 @@ import buried from "../assets/buried.png";
       margin: 0 0 clamp(1rem, 1.6vw, 1.5rem);
       color: var(--primary);
     }
+
+    #sbs-1359 .cs-subtitle {
+      font-size: 1.75rem;
+      line-height: 1.2em;
+      color: var(--primary);
+    }
+
     */ #sbs-1359 .cs-wrapper {
       width: 100%;
       height: 100%;
@@ -839,15 +843,7 @@ import buried from "../assets/buried.png";
       /* centers content horizontally, set to flex-start to left align */
       align-items: center;
     }
-    #services-1359 .cs-topper {
-      /* Override.  cs-topper cs-title and first cs-text should be removed and put into your global css sheet so it can control every instance of them on your site and is consistent. This selector is a section specific override that stays inside this stitch */
-      color: #767676;
-    }
-    #services-1359 .cs-title {
-      /* Override.  cs-topper cs-title and first cs-text should be removed and put into your global css sheet so it can control every instance of them on your site and is consistent. This selector is a section specific override that stays inside this stitch */
-      max-width: 25ch;
-      margin: 0;
-    }
+
     #services-1359 .cs-card-group {
       margin: 0;
       padding: 0;
@@ -1217,15 +1213,6 @@ import buried from "../assets/buried.png";
       position: absolute;
       bottom: 2rem;
       right: 1rem;
-    }
-
-    #sbsr-1279 .cs-background {
-      width: 60vw;
-      height: 100%;
-      /* 172px - 336px */
-      margin-left: clamp(11.125rem, 30vw, 21rem);
-      left: 50%;
-      top: 0;
     }
   }
 

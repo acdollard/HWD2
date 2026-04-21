@@ -8,10 +8,11 @@
   /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
   /* --primary: #2e6f40; */
   --primary: #e921d0;
-  --primaryDark: #901780;
+  --primaryDark: #b32766;
   --primaryLight: #9effdf;
 
   --accent: #e921d0;
+  --accent-secondary: rgb(70, 151, 232);
   --headerColor: #1a1a1a;
   --bodyTextColorWhite: #fafbfc;
   --gray-light: 229, 233, 240;
@@ -24,7 +25,7 @@
   );
   --primary-gradient: radial-gradient(
     circle,
-    var(--primaryDark) 0%,
+    rgb(72, 228, 223) 0%,
 
     var(--primary) 100%
   );
@@ -35,6 +36,9 @@
   --bodyFontSize: 1rem;
   /* 60px - 100px top and bottom */
   --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+
+  --max-width-mobile: clamp(20rem, 90vw, 30rem);
+  --max-width: 1200px;
 }
 
 body {
@@ -95,7 +99,6 @@ h2 {
   font-weight: 900;
   line-height: 1.2em;
   text-align: inherit;
-  max-width: 43.75rem;
   margin: 0 0 1rem 0;
   color: var(--headerColor);
   position: relative;

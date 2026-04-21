@@ -16,7 +16,7 @@ import logo from "../assets/logo-v3.svg";
       <HeaderLink href="/about">About</HeaderLink>
       <HeaderLink href="/contact">Contact</HeaderLink>
     </div>
-    <div class="social-links">
+    <div class="cta">
       <a href="" class="cs-button-solid">Book A Consultation</a>
     </div>
   </nav>
@@ -46,5 +46,22 @@ import logo from "../assets/logo-v3.svg";
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+
+  .internal-links {
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+  }
+
+  @media only screen and (max-width: 720px) {
+    .logo {
+      display: none;
+    }
+
+    .internal-links {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
   }
 </style>
