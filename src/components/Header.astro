@@ -3,6 +3,8 @@ import { Image } from "astro:assets";
 import { SITE_TITLE } from "../consts";
 import HeaderLink from "./HeaderLink.astro";
 import logo from "../assets/logo-v3.svg";
+
+const meetingLinkURL = "https://calendly.com/alexdollard141/30min";
 ---
 
 <header>
@@ -17,7 +19,7 @@ import logo from "../assets/logo-v3.svg";
       <HeaderLink href="/contact">Contact</HeaderLink>
     </div>
     <div class="cta">
-      <a href="" class="cs-button-solid">Book A Consultation</a>
+      <a href={meetingLinkURL} class="cs-button-solid">Book A Consultation</a>
     </div>
   </nav>
 </header>

@@ -7,6 +7,8 @@ import alexImage from "../assets/alex.jpg";
 import georgegallery from "../assets/gg-art.png";
 import pafa from "../assets/pafa.png";
 import buried from "../assets/buried.png";
+
+const meetingLinkURL = "https://calendly.com/alexdollard141/30min";
 ---
 
 <!doctype html>
@@ -37,7 +39,9 @@ import buried from "../assets/buried.png";
               Giving you a personal web partner so you never have to worry about
               your web presence again.
             </p>
-            <a href="" class="cs-button-solid">Book A Consultation</a>
+            <a href={meetingLinkURL} class="cs-button-solid"
+              >Book A Consultation</a
+            >
           </div>
         </div>
         <!--Bubble Groups-->
@@ -53,8 +57,8 @@ import buried from "../assets/buried.png";
         <div class="cs-container">
           <div class="cs-content">
             <span class="cs-topper"></span>
-            <h2 class="cs-title">Let's Build Your Business.</h2>
             <h3 class="cs-subtitle">Services:</h3>
+            <h2 class="cs-title">Let's Build Your Business.</h2>
           </div>
           <ul class="cs-card-group">
             <li class="cs-item">
@@ -135,7 +139,9 @@ import buried from "../assets/buried.png";
                 and support.
               </li>
             </ul>
-            <a href="" class="cs-button-solid">Book A Consultation</a>
+            <a href={meetingLinkURL} class="cs-button-solid"
+              >Book A Consultation</a
+            >
           </div>
         </div>
         <!--Since we cant use overflow:hidden on the section container to clip the bubbles when they overflow the edges we need to make a wrapper around the bubbles that are the same dimensions as the section container and add overflow: hidden to that element. We need to see the images overflow the section container, so this is the solution to that problem. If you swap out the bottom section with a different stitch, add padding-top: 120px no that section at a 37.5rem media query. If there isnt a hero stitch above this, add padding-bottomL 120px at a 37.5rem media query as well to account for the top picture overlapping the section above it. Hero sections have more space to work with so it's not that noticable, but if you add another regular section above this one, it will be too close to the other elements and they need the extra space -->
@@ -470,21 +476,21 @@ import buried from "../assets/buried.png";
     #hero-1351 .cs-bubbles1:before {
       /* white border bubble */
       content: "";
-      width: 38.875em;
-      height: 38.875em;
+      width: 32.875em;
+      height: 32.875em;
       background: transparent;
-      opacity: 1;
-      border: 1px solid #121214;
+      border: 2px solid #d6d6dd;
       border-radius: 50%;
       display: block;
       position: absolute;
-      top: 0;
-      left: 0;
+      top: -100px;
+      left: -100px;
       animation-name: floatAnimation;
       animation-duration: 7s;
       animation-timing-function: ease-in-out;
       animation-iteration-count: infinite;
       animation-fill-mode: forwards;
+      backdrop-filter: blur(16px);
     }
     #hero-1351 .cs-bubbles1:after {
       /* orange bubble */
@@ -497,7 +503,7 @@ import buried from "../assets/buried.png";
       display: block;
       position: absolute;
       right: 0;
-      bottom: 0;
+      bottom: 100px;
       z-index: -1;
       animation-name: floatAnimation2;
       animation-duration: 10s;
@@ -592,18 +598,7 @@ import buried from "../assets/buried.png";
     }
   }
   /* Large Desktop Parallax Effect - 1600px */
-  @media only screen and (min-width: 100rem) {
-    #hero-1351 .cs-background {
-      background: url("https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/abstract.jpg");
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-    }
-    #hero-1351 .cs-background img {
-      display: none;
-    }
-  }
+
   /* Larger Desktop - 1800px */
   @media only screen and (min-width: 112.5rem) {
     #hero-1351 .cs-bubbles2 {
@@ -822,9 +817,7 @@ import buried from "../assets/buried.png";
   @media only screen and (min-width: 0rem) {
     #services-1359 {
       padding: var(--sectionPadding);
-      background-color: #f7f7f7;
       position: relative;
-      z-index: 10;
     }
     #services-1359 .cs-container {
       width: 100%;
@@ -855,6 +848,13 @@ import buried from "../assets/buried.png";
       /* 16px - 20px */
       gap: clamp(1rem, 2vw, 1.25rem);
     }
+
+    #services-1359 .cs-subtitle {
+      font-size: 2rem;
+      line-height: 1.2em;
+      color: var(--primary);
+    }
+
     #services-1359 .cs-item {
       text-align: center;
       list-style: none;
