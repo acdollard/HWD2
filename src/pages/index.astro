@@ -5,9 +5,10 @@ import Header from "../components/Header.astro";
 import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
 import alexImage from "../assets/alex.jpg";
 import georgegallery from "../assets/gg-art.png";
-import pafa from "../assets/pafa.png";
 import buried from "../assets/buried.png";
-
+import pafa from "../assets/pafa.png";
+import { Icon } from 'astro-icon/components'
+    
 const meetingLinkURL = "https://calendly.com/alexdollard141/30min";
 ---
 
@@ -57,12 +58,13 @@ const meetingLinkURL = "https://calendly.com/alexdollard141/30min";
         <div class="cs-container">
           <div class="cs-content">
             <span class="cs-topper"></span>
-            <h3 class="cs-subtitle">Services:</h3>
-            <h2 class="cs-title">Let's Build Your Business.</h2>
+            <h2 class="cs-title">Let's Polish Your Online Presence.</h2>
+            <h3 class="cs-subtitle">What I Offer:</h3>
           </div>
           <ul class="cs-card-group">
             <li class="cs-item">
               <a href="" class="cs-link">
+                <Icon name="phonelink" height="72" width="72" class="card-icon"></Icon>
                 <h3 class="cs-h3">
                   <span class="cs-span">Website Design &</span> Development
                 </h3>
@@ -71,6 +73,7 @@ const meetingLinkURL = "https://calendly.com/alexdollard141/30min";
             </li>
             <li class="cs-item">
               <a href="" class="cs-link">
+                <Icon name="equipment" height="72" width="72" class="card-icon"></Icon>
                 <h3 class="cs-h3">
                   <span class="cs-span">Hosting &</span> Maintenance
                 </h3>
@@ -79,6 +82,7 @@ const meetingLinkURL = "https://calendly.com/alexdollard141/30min";
             </li>
             <li class="cs-item">
               <a href="" class="cs-link">
+                <Icon name="description" height="72" width="72" class="card-icon"></Icon>
                 <h3 class="cs-h3">
                   <span class="cs-span">SEO-Optimized</span> Copy
                 </h3>
@@ -87,6 +91,7 @@ const meetingLinkURL = "https://calendly.com/alexdollard141/30min";
             </li>
             <li class="cs-item">
               <a href="" class="cs-link">
+                <Icon name="invert-colors" height="72" width="72" class="card-icon"></Icon>
                 <h3 class="cs-h3">
                   <span class="cs-span">Custom Logo &</span> Brand Design
                 </h3>
@@ -95,6 +100,7 @@ const meetingLinkURL = "https://calendly.com/alexdollard141/30min";
             </li>
             <li class="cs-item">
               <a href="" class="cs-link">
+                <Icon name="offline-bolt" height="72" width="72" class="card-icon"></Icon>
                 <h3 class="cs-h3">
                   <span class="cs-span">Lightning Fast</span> Page Speeds
                 </h3>
@@ -103,8 +109,9 @@ const meetingLinkURL = "https://calendly.com/alexdollard141/30min";
             </li>
             <li class="cs-item">
               <a href="" class="cs-link">
+                <Icon name="send" height="72" width="72" class="card-icon"></Icon>
                 <h3 class="cs-h3">
-                  <span class="cs-span">Unlimited</span> Content Edits
+                  <span class="cs-span">Data Migration</span>
                 </h3>
               </a>
               <picture class="cs-background"> </picture>
@@ -288,7 +295,7 @@ const meetingLinkURL = "https://calendly.com/alexdollard141/30min";
       </section>
 
       <!-- ============================================ -->
-      <!--                    Services                  -->
+      <!--                    Three Steps                  -->
       <!-- ============================================ -->
 
       <section id="services-1359">
@@ -467,8 +474,8 @@ const meetingLinkURL = "https://calendly.com/alexdollard141/30min";
       z-index: -1;
     }
     #hero-1351 .cs-bubbles1 {
-      width: 42.5em;
-      height: 45.25em;
+      width: 38.5em;
+      height: 38.5em;
       /* changes to 172 at large desktop */
       top: 0;
       right: -11.875rem;
@@ -476,8 +483,8 @@ const meetingLinkURL = "https://calendly.com/alexdollard141/30min";
     #hero-1351 .cs-bubbles1:before {
       /* white border bubble */
       content: "";
-      width: 32.875em;
-      height: 32.875em;
+      width: 22.875em;
+      height: 22.875em;
       background: transparent;
       border: 2px solid #d6d6dd;
       border-radius: 50%;
@@ -526,7 +533,8 @@ const meetingLinkURL = "https://calendly.com/alexdollard141/30min";
       height: 20.625rem;
       background: transparent;
       opacity: 1;
-      border: 1px solid #fff;
+      border: 2px solid #d6d6dd;
+      backdrop-filter: blur(16px);
       border-radius: 50%;
       display: block;
       position: absolute;
@@ -886,6 +894,10 @@ const meetingLinkURL = "https://calendly.com/alexdollard141/30min";
       background-color: var(--primary);
       opacity: 0.84;
     }
+    #services-1359 .cs-item:hover [data-icon] {
+      color: #000;
+      transition: color 0.3s;
+    }
     #services-1359 .cs-item:hover .cs-background img {
       transform: scale(1.2);
     }
@@ -907,7 +919,7 @@ const meetingLinkURL = "https://calendly.com/alexdollard141/30min";
       line-height: 1.2em;
       font-weight: bold;
       text-align: inherit;
-      margin: 0;
+      margin: 0.5rem 0;
       color: var(--bodyTextColorWhite);
       transition: color 0.3s;
     }
@@ -1106,14 +1118,13 @@ const meetingLinkURL = "https://calendly.com/alexdollard141/30min";
 <---   Side By Side Reverse     -->
 <--- -------------------------- -*/
 
-  /* Mobile - 360px */
-  @media only screen and (min-width: 0rem) {
-    #sbsr-1279 {
-      padding: var(--sectionPadding);
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #sbsr-1279 {
+  padding: var(--sectionPadding);
       overflow: hidden;
       position: relative;
       z-index: 1;
-      background-color: #f7f7f7;
     }
     #sbsr-1279 .cs-container {
       width: 100%;
