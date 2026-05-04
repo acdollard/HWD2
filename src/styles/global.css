@@ -7,11 +7,11 @@
 :root {
   /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
   /* --primary: #2e6f40; */
-  --primary: #e921d0;
+  --primary: #d214bc;
   --primaryDark: #b32766;
   --primaryLight: #9effdf;
 
-  --accent: #e921d0;
+  --accent: #d214bc;
   --accent-secondary: rgb(70, 151, 232);
   --headerColor: #1a1a1a;
   --bodyTextColorWhite: #fafbfc;
@@ -249,7 +249,7 @@ hr {
 }
 
 .cs-button-solid:hover {
-  color: var(--primary);
+  color: #fff;
 }
 
 .cs-button-solid:hover::before {
