@@ -1,5 +1,5 @@
 ---
-import logo from "../assets/logo-v3.svg";
+import logo from "../assets/141.svg";
 import Image from "astro/components/Image.astro";
 import HeaderLink from "./HeaderLink.astro";
 import Header from "./Header.astro";
@@ -11,14 +11,18 @@ const meetingLinkURL = "https://calendly.com/alexdollard141/30min";
   <div class="cs-container">
     <!--Nav Logo-->
     <!--Logo is turned white in the css with a filter on dark mode-->
-    <a href="/" class="cs-logo" aria-label="Return to [Company Name] Home page">
+    <a href="/" class="cs-logo" aria-label="Return to 141 Web Studios">
       <Image
         src={logo}
         alt=""
-        width="190"
+        width="111"
         aria-hidden="true"
         decoding="async"
       />
+      <div class="logo-text-box">
+        <p class="logos-font">Web</p>
+        <p class="logos-font">Studios</p>
+      </div>
     </a>
     <!--Navigation List-->
     <nav class="cs-nav" aria-label="main navigation">
@@ -242,6 +246,22 @@ const meetingLinkURL = "https://calendly.com/alexdollard141/30min";
   /*-- -------------------------- -->
 <---     Mobile Navigation      -->
 <--- -------------------------- -*/
+
+  .logos-font {
+    margin: 0;
+    padding-left: 0.5rem;
+    text-decoration: none !important;
+    color: var(--headerColor);
+    font-size: 1.5rem;
+    line-height: 1.2;
+  }
+
+  .cs-logo {
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
   /* Mobile - 1023px */
   @media only screen and (max-width: 1023.5px) {
     body.cs-open {
@@ -320,8 +340,7 @@ const meetingLinkURL = "https://calendly.com/alexdollard141/30min";
       gap: 1.5rem;
     }
     #cs-navigation .cs-logo {
-      width: auto;
-      max-width: 12.5rem;
+      width: 100px;
       height: 100%;
       margin: 0 auto 0 0;
       /* prevents padding from affecting height and width */
@@ -331,6 +350,10 @@ const meetingLinkURL = "https://calendly.com/alexdollard141/30min";
       justify-content: flex-start;
       align-items: center;
       z-index: 10;
+    }
+
+    .cs-logo img {
+      border-radius: 0 !important;
     }
     #cs-navigation .cs-logo img {
       width: 100%;
@@ -640,7 +663,7 @@ const meetingLinkURL = "https://calendly.com/alexdollard141/30min";
       flex: none;
     }
     #cs-navigation .cs-li-link {
-      font-size: 1rem;
+      font-size: 1.3rem;
       line-height: 1.5em;
       text-decoration: none;
       margin: 0;
